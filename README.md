@@ -41,6 +41,8 @@ Dump files are bigger because there's more rows.
 
 This makes backups larger and slower to produce.
 
+TODO: Just how much bigger with a propper (i.e. non insert based) pg_dump?
+
 ## Usability
 
 TODO: cover select queries once data is already in there
@@ -79,3 +81,13 @@ Here are some example runs:
      real	0m10.012s
      user	0m0.130s
      sys	0m0.010s
+
+# TODO
+
+There's a lot outstanding to make these tests properly useful.
+
+Write a test harness to automate the whole job and produce a report file at the end.
+
+Complex select queries where we test for the (noteably unindexed) value of a paarticular attribute or multiple attributes.
+
+Test what effect using transactings on the grouped denormalised form has (I think it should speed it up dramatically).

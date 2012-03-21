@@ -28,8 +28,10 @@ I've been testing with PostgreSQL 8.4.9 with a LC_CTYPE value of "C" as this is 
 ## Maintainability
 
 The denormalised form essentially requires decoupling the name of an attribute from its value during insert, e.g.:
-    INSERT INTO nt_attr_val (assetid, attrid, value)
-    VALUES ('$assetid', 0, 'some value');
+
+	INSERT INTO nt_attr_val (assetid, attrid, value)
+	VALUES ('$assetid', 0, 'some value');
+     
 Without some external lookup it's not obvious what attrid "0" translates to.
 
 
@@ -48,7 +50,8 @@ TODO: cover select queries once data is already in there
 # Example runs
 
 Here are some example runs:
-     [root@foo pgsql_normalisation_test]# psql -U postgres nt < init.sql > /dev/null; time psql -U postgres nt < denormal.sql  > /dev/null
+     
+	 [root@foo pgsql_normalisation_test]# psql -U postgres nt < init.sql > /dev/null; time psql -U postgres nt < denormal.sql  > /dev/null
      
      real	0m24.111s
      user	0m0.240s

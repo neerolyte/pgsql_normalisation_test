@@ -2,9 +2,7 @@
 
 This is still very much a work in progress. You're welcome to poke around at the contents, just don't expect it to be complete and fully formed.
 
-I work with an ORM-like app that happens to have some pretty denormalised tables in its main database backend. Recently I've started to suspect this denormalisation is responsible for more of our slow down than we might otherwise expect.
-
-These tests are an attempt to emulate just the minimum set of what goes in our backend for asset attribute storage with the current (denormalised) structure and what would go on with a normalised structure.
+These tests are an attempt to emulate just the minimum set of one form of denormalised storage for an ORM like asset attribute storage backend v.s. a more normalised approach.
 
 I think these tests might be generally useful to anyone thinking about DB design on top of PostgreSQL though.
 
